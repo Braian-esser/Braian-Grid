@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo de Grid Alinhado</title>
+<style>
+  body {
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 15px;
+    justify-content: center; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto; 
+  }
+
+  .container div {
+    background-color: #f1f1f1;
+    color: black;
+    border: 2px solid #333;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+  }
+
+  /* Estilo do botão */
+  .container .botao {
+    grid-column: 1 / span 3; /* Faz o botão ocupar as 3 colunas */
+    background: none; /* Remove o fundo do bloco */
+    border: none;
+    text-align: center; /* Centraliza o conteúdo dentro do div */
+  }
+
+  .container .botao button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 40px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .container .botao button:hover {
+    background-color: #cfcfcf;
+    transform: scale(1.05);
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Parabéns!! Agora só falta seu cadastro para entrar na indústria SENAI.</h1>
+<p>Por favor, marque as opções abaixo corretamente:</p>
+
+<div class="container">
+  <div>Nome do estudante</div>
+  <div>Email do responsável</div>
+  <div>Telefone</div>
+
+  <div><input type="text" placeholder="Digite seu nome"></div>
+  <div><input type="email" placeholder="Digite seu email"></div>
+  <div><input type="tel" placeholder="Digite seu telefone"></div>
+
+  <!-- Botão centralizado -->
+  <div class="botao">
+    <button>Cadastrar</button>
+  </div>
+</div>
+
+</body>
+</html>
